@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Exercício 04</title>
+    <style type="text/css">
+    *{
+        font-family: Arial;
+    }
+    #cabecalho {
+        color: darkgray;
+    }
+    #form {
+        margin:0 300px 0 300px;
+        border-color: #333;
+    }
+    #registro {
+        display: flex;
+        padding: 10px 15px 0 0;
+    }
+    .registrorg {
+        padding: 0 0 0 0;
+    }
+    .registrocpf  {
+        padding: 0 0 0 35px;
+    }
+    .registrocpf input {
+        background-color: #ddd;
+    }
+    .registrorg input {
+        background-color: #ddd;
+    }
+    #genxdat {
+        display: flex;
+        align-items: center;
+        padding: 0 0 0 140px;
+    }
+    .gen {
+        padding: 0 25px 0 25px;
+        border-color: #333;
+    }
+    .date {
+        padding: 0 25px 0 25px;
+    
+    }
+    </style>
+</head>
+<body>
+    <div id="cabecalho">
+        <h1><center>Ficha Cadastral</center></h1>
+    </div>
+    <div id="form">
+   <form method="post" action="salvar.jsp">
+       <fieldset style="border-color: #333;">
+           <legend>Dados Pessoais:</legend>
+           <label>Nome:<br/>
+             <input type="text" name="nome" size="80px"style="background-color:#ddd; border-color: #333;" />
+             </label><br/>
+            <div id="registro">
+                <div class="registrorg">
+             <label>RG:<br/>
+                <input type="text" name="rg" size="35px" style="border-color: #333;"/><br/>
+                </label> </div>
+                <div class="registrocpf">
+                <label>CPF:<br/>                    
+                    <input type="text" name="cpf" size="35px" style="border-color: #333;" /><br/>
+                    </label></div></div><br/>
+                    <label>Endereço:<br/>
+                        <input type="text" name="endereco" size="80px" style="background-color:#ddd; border-color: #333;" />
+                        </label><br/><br/>
+                        <div id="genxdat">
+                            <div class="gen">
+                        <label>Gênero:<br/>
+                            <select name="genero" style="background-color:#ddd;">
+                            <option value="feminino">Feminino</option>
+                            <option value="masculino">Masculino</option>
+                        </select>    
+                        </label></div><br/>
+                        <div class="date">
+                        <label>Data de Nascimento:</label><br/>
+                        <input type="date" name="nascimento" style="background-color:#ddd; border-color: #333;" /><br/>
+                        </div></div><br/>
+                        <label>
+                            Situação Civil:<br/>
+                            <input id="solteiro" type="radio" name="genero" value="s" />
+                            <label for="solteiro">Solteira(o)</label>
+                            <input id="casado" type="radio" name="genero" value="c" />
+                            <label for="casado">Casada(o)</label>
+                            <input id="viuvo" type="radio" name="genero" value="v" />
+                            <label for="viuvo">Viúva(o)</label>
+                        </label><br/><br/>
+                        <center><input type="submit" value="Cadastrar" style="background-color:#ddd; border-color: #333;" /></center>                        
+       </fieldset>
+   </form></div>
+    </body>
+    </html>
